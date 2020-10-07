@@ -22,6 +22,7 @@ ls /home/$USER/Software/scilab-6.0.2/bin/scilab* -al
 #echo $TEST
 #$TEST
 echo "***************Checkpoint 5 ****************************"
+cat /etc/os-release
 $SCILAB_EXECUTABLE -e "disp(%pi); exit;" -nb
 python -m scilab_kernel.check
 echo "***************Checkpoint 7 ****************************"
