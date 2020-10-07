@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo apt-get purge scilab
+sudo apt-get autoremove
 mkdir ~/Software
 cd  ~/Software
 wget https://www.scilab.org/download/6.0.2/scilab-6.0.2.bin.linux-x86_64.tar.gz
@@ -12,8 +14,7 @@ cp -a ~/Software/scilab-6.0.2/share/{icons,applications,mime} ~/.local/share/
 update-mime-database ~/.local/share/mime/
 
 echo 'export SCILAB_EXECUTABLE ="/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli"' >> ~/.bashrc
-#export SCILAB_EXECUTABLE=/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli
-export SCILAB_EXECUTABLE="/homeNapaka/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli"
+export SCILAB_EXECUTABLE="/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli"
 echo "***************Checkpoint 4 ****************************"
 ls /home/$USER/Software/scilab-6.0.2/bin/scilab* -al
 #export TEST=pwd
