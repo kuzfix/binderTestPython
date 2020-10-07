@@ -2,3 +2,5 @@
 echo 'export SCILAB_EXECUTABLE ="/usr/bin/scilab-adv-cli"' >> ~/.bashrc
 echo "MOJE SPOROCILO***************!!!!!!!!!!!!!!!"
 ls /usr/bin/scilab-adv-cli -al
+echo "disp(%pi)"|/usr/bin/scilab-adv-cli
+echo "disp(%pi)"|$SCILAB_EXECUTABLE
