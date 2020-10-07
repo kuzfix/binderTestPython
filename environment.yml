@@ -1,2 +1,4 @@
 dependencies:
-  - scilab_kernel
+  - pip
+  - pip:
+      - scilab_kernel
