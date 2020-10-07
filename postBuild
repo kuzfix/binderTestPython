@@ -2,16 +2,21 @@
 mkdir ~/Software
 cd  ~/Software
 wget https://www.scilab.org/download/6.0.2/scilab-6.0.2.bin.linux-x86_64.tar.gz
+echo "***************Checkpoint 1 ****************************"
 tar -xzf scilab-6.0.2.bin.linux-x86_64.tar.gz
 cd scilab-6.0.2
+echo "***************Checkpoint 2 ****************************"
 echo "PATH=$PATH:/home/$USER/Software/scilab-6.0.2/bin" >> ~/.bashrc
 echo "PATH=$PATH:/home/$USER/Software/scilab-6.0.2/bin" >> ~/.profile
 mkdir -p ~/.local/share/applications
 cp -a ~/Software/scilab-6.0.2/share/{icons,applications,mime} ~/.local/share/
 update-mime-database ~/.local/share/mime/
+echo "***************Checkpoint 3 ****************************"
 
-echo 'export SCILAB_EXECUTABLE ="/usr/bin/scilab-adv-cli"' >> ~/.bashrc
-echo "MOJE SPOROCILO***************!!!!!!!!!!!!!!!"
+echo 'export SCILAB_EXECUTABLE ="/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli"' >> ~/.bashrc
+echo "***************Checkpoint 4 ****************************"
 ls /usr/bin/scilab-adv-cli -al
-echo "disp(%pi)"|/usr/bin/scilab-adv-cli
-echo "disp(%pi)"|$SCILAB_EXECUTABLE
+echo "***************Checkpoint 5 ****************************"
+echo "disp(%pi)"|/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli
+$SCILAB_EXECUTABLE -e "disp(%pi); exit;" -nb
+echo "***************Checkpoint 6 ****************************"
