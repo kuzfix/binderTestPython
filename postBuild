@@ -15,7 +15,7 @@ echo "***************Checkpoint 3 ****************************"
 
 echo 'export SCILAB_EXECUTABLE ="/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli"' >> ~/.bashrc
 echo "***************Checkpoint 4 ****************************"
-ls /usr/bin/scilab-adv-cli -al
+ls /home/$USER/Software/scilab-6.0.2/bin/scilab -al
 echo "***************Checkpoint 5 ****************************"
 echo "disp(%pi)"|/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli
 $SCILAB_EXECUTABLE -e "disp(%pi); exit;" -nb
