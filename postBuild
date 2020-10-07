@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo apt-get purge scilab
-sudo apt-get autoremove
+apt-get purge scilab
+apt-get autoremove
 mkdir ~/Software
 cd  ~/Software
 wget https://www.scilab.org/download/6.0.2/scilab-6.0.2.bin.linux-x86_64.tar.gz
@@ -23,4 +23,5 @@ ls /home/$USER/Software/scilab-6.0.2/bin/scilab* -al
 #$TEST
 echo "***************Checkpoint 5 ****************************"
 $SCILAB_EXECUTABLE -e "disp(%pi); exit;" -nb
+python -m scilab_kernel.check
 echo "***************Checkpoint 7 ****************************"
