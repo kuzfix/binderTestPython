@@ -14,7 +14,7 @@
 #echo 'export SCILAB_EXECUTABLE ="/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli"' >> ~/.bashrc
 echo "***************Checkpoint 4 ****************************"
 ls /home/$USER/Software/scilab-6.0.2/bin/scilab -al
-export TEST = "pwd"
+export TEST=pwd
 echo TEST
 echo $TEST
 $TEST
