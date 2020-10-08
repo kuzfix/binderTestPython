@@ -1,10 +1,10 @@
 #!/bin/bash
-apt-get purge scilab
-apt-get autoremove
+#apt-get install libcanberra-gtk-module libcanberra-gtk3-module
+#apt-get purge scilab
+#apt-get autoremove
 mkdir ~/Software
 cd  ~/Software
 wget https://www.scilab.org/download/6.0.2/scilab-6.0.2.bin.linux-x86_64.tar.gz
-echo "***************Checkpoint 1 ****************************"
 tar -xzf scilab-6.0.2.bin.linux-x86_64.tar.gz
 cd scilab-6.0.2
 echo "PATH=$PATH:/home/$USER/Software/scilab-6.0.2/bin" >> ~/.bashrc
@@ -15,14 +15,8 @@ update-mime-database ~/.local/share/mime/
 
 echo 'export SCILAB_EXECUTABLE ="/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli"' >> ~/.bashrc
 export SCILAB_EXECUTABLE="/home/$USER/Software/scilab-6.0.2/bin/scilab-adv-cli"
-echo "***************Checkpoint 4 ****************************"
-ls /home/$USER/Software/scilab-6.0.2/bin/scilab* -al
-#export TEST=pwd
-#echo TEST
-#echo $TEST
-#$TEST
-echo "***************Checkpoint 5 ****************************"
+echo "***************Checkpoint x ****************************"
 cat /etc/os-release
 $SCILAB_EXECUTABLE -e "disp(%pi); exit;" -nb
 python -m scilab_kernel.check
-echo "***************Checkpoint 7 ****************************"
+echo "***************Checkpoint z ****************************"
